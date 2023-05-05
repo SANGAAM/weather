@@ -9,8 +9,8 @@
   max-width: 400px;
   height: 550px;
   color: aliceblue;
-  background-image: linear-gradient(36deg,rgb(178, 178, 226) 50%,rgb(67, 67, 194));
-  border-radius:2rem ;
+  background-color: #48dbfb;
+  background-image: linear-gradient(315deg, #48dbfb 0%, #d3d3d3 74%);  border-radius:2rem ;
   text-align: left;
 }
 .weather-icon{
