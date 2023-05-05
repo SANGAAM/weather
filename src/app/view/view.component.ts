@@ -22,22 +22,24 @@ export class ViewComponent implements OnInit {
    
 
   ngOnInit(): void{
-    
+
     // Fetch form data from local storage
     const formDataJson = localStorage.getItem('formUsers');
+    let postalCode;
     if (formDataJson) {
       this.formData = JSON.parse(formDataJson);
       console.log('formData:', this.formData);
-
+       postalCode=this.formData[0].postalCode
     }
-    this.weatherService.getWeather().subscribe({
+    this.weatherService.getWeather(postalCode).subscribe({
       next: (res)=>{
         console.log(res);
         this.myWeather=res;
         this.temperature=this.myWeather.main.temp;
         this.humidity=this.myWeather.main.humidity;
         this.description=this.myWeather.weather[0].main;
-        this.Feelslike=this.myWeather.main.feels_like
+        this.Feelslike=this.myWeather.main.feels_like;
+        
         this.iconURL='http://openweathermap.org/img/wn/'+this.myWeather.weather[0].icon+'@2x.png';
       },
       error: (error)=>console.log(error.message),
