@@ -1,13 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
 html,
-body {
-  height: 100%;
-}
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-image: url("https://mdbgo.io/ascensus/mdb-advanced/img/clear.gif");
-  background-repeat: no-repeat;
+  background-image: linear-gradient(36deg,rgb(175, 110, 125) 50%,rgb(67, 67, 194));
   background-size: cover;
+  /* background-repeat: no-repeat; */
+  /* background-image: url("https://mdbgo.io/ascensus/mdb-advanced/img/clear.gif");
+  background-repeat: no-repeat;
+  background-size: cover; */
 }
