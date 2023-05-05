@@ -1,0 +1,35 @@
+.mat-tab-group {
+  margin-bottom: 48px;
+}
+.content {
+  margin-top: 3.5rem;
+  text-align: -webkit-center;
+  background-color: deepskyblue;
+}
+.example-card {
+  max-width: 400px;
+  height: 550px;
+  /* padding: 5px; */
+  color: aliceblue;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 13px;
+  background-image: url("https://mdbgo.io/ascensus/mdb-advanced/img/clear.gif");
+  background-repeat: no-repeat;
+  background-size: 500px 550px;
+}
+
+.upper-data img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.weather{
+  
+    height: 403px;
+}
+.example-header-image {
+  background-size: cover;
+}

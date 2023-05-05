@@ -1,0 +1,72 @@
+<div class="content">
+  <mat-card class="example-card" >
+    <mat-card-header class="upper-data"> 
+      
+  
+    
+  </mat-card-header>
+    <mat-card-content >
+      <mat-tab-group animationDuration="0ms">
+        <mat-tab label="Form Data">
+          <div class="card-content">
+          <table *ngFor="let item of formData">
+            <mat-list role="list">
+              <mat-list-item role="listitem"
+                >First Name: {{ item.Fname }}</mat-list-item
+              >
+              <mat-list-item role="listitem"
+                >Last Name: {{ item.Lname }}</mat-list-item
+              >
+              <mat-list-item role="listitem"
+                >Mobile: {{ item.mobile }}</mat-list-item
+              >
+              <mat-list-item role="listitem"
+                >Gender:
+                {{ item.gender === "1" ? "Male" : "Female" }}</mat-list-item
+              >
+              <mat-list-item role="listitem">Age: {{ item.age }}</mat-list-item>
+              <mat-list-item role="listitem"
+                >State: {{ item.state }}</mat-list-item
+              >
+              <mat-list-item role="listitem"
+                >District: {{ item.district }}</mat-list-item
+              >
+              <mat-list-item role="listitem"
+                >Postal Code: {{ item.postalCode }}</mat-list-item
+              >
+
+            </mat-list>
+
+            
+          </table>
+        </div>
+        </mat-tab>
+        <mat-tab label="Weather Information">
+          <div class="weather">
+            <p><img src="{{iconURL}}" alt="weather image"/></p>
+            <mat-list role="list">
+              <mat-list role="list">
+                <mat-list-item role="listitem"
+                  >Temperature: {{ temperature }}&deg;F</mat-list-item
+                >
+                <mat-list-item role="listitem"
+                  >Humidity: {{ humidity }}%</mat-list-item
+                >
+                <mat-list-item role="listitem"
+                  >Description: {{ description }}</mat-list-item
+                >
+                <mat-list-item role="listitem"
+                  >Feels Like: {{ temperature }}&deg;F</mat-list-item
+                >
+              </mat-list>
+             
+            </mat-list>
+            
+         
+        </div>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card-content>
+  </mat-card>
+</div>
+

@@ -1,0 +1,118 @@
+<div class="content">
+  <mat-card class="example-card">
+    <table class="example-full-width-1" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>First name</mat-label>
+            <input matInput placeholder="Enter your name" [(ngModel)]="formObj.Fname">
+
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Long Last Name </mat-label>
+            <input matInput placeholder="Enter your email" [(ngModel)]="formObj.Lname">
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field appearance="fill">
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker" (dateChange)="calculateAge($event)"/>
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle
+              matIconSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Age</mat-label>
+            <input matInput placeholder="Enter Your Age" [(ngModel)]="formObj.age" id="ageInput" value="" />
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+    <mat-form-field appearance="fill" class="example-full-width">
+      <mat-label>Select an option</mat-label>
+      <mat-select [(ngModel)]="formObj.gender" disableRipple>
+        <mat-option value="1">Male</mat-option>
+        <mat-option value="2">Female</mat-option>
+        <mat-option value="3">Other </mat-option>
+      </mat-select>
+    </mat-form-field>
+    
+      
+    
+    <mat-form-field class="example-full-width">
+      <mat-label>Address</mat-label>
+      <textarea matInput placeholder="Ex. 100 Main St"></textarea
+      >
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Address 2</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+   
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width-2">
+            <mat-label>Phone Number</mat-label>
+            <span matPrefix>+91 &nbsp;</span>
+            <input type="tel" matInput placeholder="88479805338" [(ngModel)]="formObj.mobile">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width-2">
+            <mat-label>Postal Code</mat-label>
+            <input
+              matInput
+              #postalCode
+              maxlength="6"
+              placeholder="Ex. 941051"
+              [(ngModel)]="formObj.postalCode"
+              value=""
+              (input)="onPostalCodeChange(postalCode.value)"
+            />
+            <mat-hint align="end">{{ postalCode.value.length }} / 6</mat-hint>
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width-2">
+            <mat-label>State</mat-label>
+            <input matInput placeholder="Ex. Maharashtra" [(ngModel)]="formObj.state" />
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width-2">
+            <mat-label>District</mat-label>
+            <input matInput placeholder="Ex. Dighi" [(ngModel)]="formObj.district" />
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+    
+     
+      <button mat-raised-button color="warn" class="btn" type="button" (click)="onSubmit()" [routerLink]="['/view']" routerLinkActive="router-link-active"  >SAVE</button>
+
+    
+ 
+  </mat-card>
+
+ 
+
+
+</div>
