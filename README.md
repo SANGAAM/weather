@@ -11,7 +11,6 @@ Repository Link-https://github.com/SANGAAM/weather
 
 URL-
 
-![Screenshot (17)](https://user-images!.githubusercontent.com/96041004/236522383-4c82f152-b65e-46d5-9117-86f965e8cad9.png)
 ![Screenshot (18)](https://user-images.githubusercontent.com/96041004/236522904-916e5b5d-b92b-4249-8ab2-c35e0e03ddb7.png)
 
 
